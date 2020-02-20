@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 用于输出日志  -->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--设置别名,在配置mapper时，方便返回结果不写全限定名而直接写小写类即可识别-->
+    <typeAliases>
+        <package name="org.example.pojo"/>
+    </typeAliases>
+
+
+    <!--映射sql配置-->
+    <mappers>
+        <mapper resource="org/example/dao/BookMapper.xml"/>
+    </mappers>
+
+
+</configuration>
